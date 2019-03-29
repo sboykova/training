@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "training": {
+    "angular-training": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/training",
+            "outputPath": "dist/angular-training",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -30,7 +30,9 @@
               "src/styles.scss",
               "node_modules/igniteui-angular/styles/igniteui-angular.css"
             ],
-            "scripts": ["./node_modules/hammerjs/hammer.min.js"]
+            "scripts": [
+              "./node_modules/hammerjs/hammer.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -62,18 +64,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "training:build"
+            "browserTarget": "angular-training:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "training:build:production"
+              "browserTarget": "angular-training:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "training:build"
+            "browserTarget": "angular-training:build"
           }
         },
         "test": {
@@ -86,7 +88,9 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": ["./node_modules/hammerjs/hammer.min.js"],
+            "scripts": [
+              "./node_modules/hammerjs/hammer.min.js"
+            ],
             "assets": [
               "src/favicon.ico",
               "src/assets"
@@ -107,7 +111,7 @@
         }
       }
     },
-    "training-e2e": {
+    "angular-training-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -116,11 +120,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "training:serve"
+            "devServerTarget": "angular-training:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "training:serve:production"
+              "devServerTarget": "angular-training:serve:production"
             }
           }
         },
@@ -136,5 +140,5 @@
       }
     }
   },
-  "defaultProject": "training"
+  "defaultProject": "angular-training"
 }
